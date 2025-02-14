@@ -1,0 +1,24 @@
+<!-- Banner Section -->
+<div class="banner">
+  <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dGhlYXRlcnxlbnwwfHwwfHx8MA%3D%3D" alt="Movie Banner" class="banner-image">
+  <div class="banner-text">
+    <h1>Save any kind of movies</h1>
+  </div>
+</div>
+
+<div class='d-flex justify-content-between align-items-center'>
+  <%= link_to 'Back to Lists', lists_path, class: 'back-to-lists-button' %>
+  <h1 class="list-title"><%= @list.name %></h1>
+  <%= link_to 'Add a bookmark', new_list_bookmark_path(@list), class: 'back-to-lists-button' %>
+</div>
+
+<div class="movies-container">
+  <% @movies.each do |movie| %>
+    <div class="movie-item">
+      <h3 class="movie-title"><%= movie.title %></h3>
+      <p class="movie-overview"><%= movie.overview %></p>
+      <p class="movie-rating">Rating: <%= movie.rating %></p>
+      <%= image_tag movie.poster_url, alt: movie.title, class: 'movie-poster' %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,25 @@
+<h1>Create a New List</h1>
+
+<%= form_with(model: @list, local: true, class: "new-list-form") do |form| %>
+  <% if @list.errors.any? %>
+    <div class="error-messages">
+      <h2><%= pluralize(@list.errors.count, "error") %> prohibited this list from being saved:</h2>
+      <ul>
+        <% @list.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name, "List Name", class: "form-label" %>
+    <%= form.text_field :name, class: "form-input", placeholder: "Enter list name" %>
+  </div>
+
+  <div class="form-submit">
+    <%= form.submit "Create List", class: "submit-button" %>
+  </div>
+<% end %>
+
+<%= link_to 'Back to Lists', lists_path, class: 'back-to-lists-link' %>

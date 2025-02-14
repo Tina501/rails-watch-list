@@ -1,0 +1,95 @@
+// app/assets/stylesheets/components/new_list.scss
+
+.new-list-form {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.new-list-form h1 {
+  font-size: 2.2rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-size: 1.1rem;
+  color: #333;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.form-submit {
+  text-align: center;
+}
+
+.submit-button {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.error-messages {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.error-messages ul {
+  list-style: none;
+  padding: 0;
+}
+
+.error-messages li {
+  font-size: 1rem;
+}
+
+.back-to-lists-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.back-to-lists-link:hover {
+  background-color: #218838;
+}
